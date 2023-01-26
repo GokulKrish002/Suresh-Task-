@@ -45,18 +45,22 @@ namespace Suresh
 
             if(readed.Read())
             {
+                Btn_green.BackColor = System.Drawing.Color.Gray;
+                Btn_yellow.BackColor = System.Drawing.Color.Gray;
+                Btn_red.BackColor = System.Drawing.Color.Gray;
+
                 string status = readed["status"].ToString();
                 if (status == "Online")
                 {
-                    
+                    Btn_green.BackColor = System.Drawing.Color.Green;
                 }
                 else if (status == "Busy")
                 {
-
+                    Btn_yellow.BackColor = System.Drawing.Color.Yellow;
                 }
                 else if (status == "Offline")
                 {
-
+                    Btn_red.BackColor = System.Drawing.Color.Red;
                 }
             }
             else
